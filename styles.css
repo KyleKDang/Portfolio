@@ -30,7 +30,6 @@ body {
 
 .introduction-text-container {
     flex: 1;
-
     display: flex;
     flex-direction: column;
 }
@@ -60,29 +59,30 @@ body {
 }
 
 .my-approach-row {
-    height: 900px;
+    display: flex;
+    flex-direction: row;
+    min-height: 900px;
+    align-items: center;
+}
+
+.coding-image-container, .my-approach-text-container {
+    flex: 1; 
 }
 
 .coding-image-container {
-    position: relative;
-    flex: 1;
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .coding-image {
-    height: 100%;
-    width: 100%;
-    object-position: center;
-}
-
-.my-approach-text-container {
-    flex: 1;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover; 
 }
 
 .my-approach-textbox {
     padding: 0 100px;
-    display: flex;
-    flex-direction: column;
 }
 
 .my-approach-header {
@@ -100,6 +100,33 @@ body {
     margin-bottom: 35px;
     font-size: 18px;
     font-family: Arial;
+}
+
+@media (max-width: 1300px) {
+    .my-approach-row {
+        flex-direction: column;
+        min-height: auto; 
+    }
+
+    .coding-image-container, .my-approach-text-container {
+        width: 100%;
+    }
+
+    .my-approach-textbox {
+        padding: 0 20px;
+    }
+
+    .my-approach-header {
+        font-size: 40px;
+    }
+
+    .my-approach-subheader {
+        font-size: 24px;
+    }
+
+    .my-approach-paragraph {
+        font-size: 16px;
+    }
 }
 
 .skills-row {

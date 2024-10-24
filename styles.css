@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Roboto;
 }
@@ -19,11 +23,10 @@ body {
 .row {
     display: flex;
     align-items: center;
-    overflow: auto;
 }
 
 .introduction-row {
-    height: 700px;
+    min-height: 700px;
     border: 1px solid black;
     background-color: rgb(225, 225, 230);
 }
@@ -35,8 +38,10 @@ body {
 }
 
 .introduction-textbox {
-    padding-left: 150px;
-    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15%;
+    gap: 20px;
 }
 
 .introduction-name {
@@ -51,40 +56,14 @@ body {
     flex: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .headshot-image {
     width: 400px;
     border-radius: 50px;
+    margin: 20px;
 }
-
-
-@media (max-width: 880px) {
-    .introduction-row {
-        flex-direction: column; 
-        height: auto;
-        padding: 20px;
-    }
-
-    .introduction-textbox {
-        padding-left: 20px; 
-        padding-right: 20px;
-    }
-
-    .introduction-name {
-        font-size: 50px;
-    }
-
-    .introduction-text {
-        font-size: 20px; 
-    }
-
-    .headshot-image {
-        width: 250px; 
-        border-radius: 25px;
-    }
-}
-
 
 .my-approach-row {
     display: flex;
@@ -106,11 +85,11 @@ body {
 .coding-image {
     max-height: 100%;
     max-width: 100%;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 .my-approach-textbox {
-    padding: 0 100px;
+    padding: 0 10%;
 }
 
 .my-approach-header {
@@ -250,6 +229,7 @@ body {
     height: 375px;
     background-color: #8EB6DC;
     border-radius: 50px;
+    overflow: auto;
 }
 
 .card-image {
@@ -283,7 +263,7 @@ body {
 
 .footer-name {
     flex: 1;
-    padding-left: 75px;
+    padding-left: 10%;
     font-size: 50px;
     line-height: 1;
     padding-top: none;
@@ -292,7 +272,7 @@ body {
 
 .footer-contact {
     flex: 1;
-    padding-left: 550px;
+    padding-left: 30%;
 }
 
 .interest-page-row {

@@ -77,9 +77,14 @@ body {
 }
 
 .coding-image-container {
-    display: flex;
+    background-image: url(/images/coding.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  
+    min-height: 900px;
+    /*display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;*/
 }
 
 .coding-image {
@@ -124,15 +129,15 @@ body {
     }
 
     .my-approach-header {
-        font-size: 40px;
+        font-size: 60px;
     }
 
     .my-approach-subheader {
-        font-size: 24px;
+        font-size: 36px;
     }
 
     .my-approach-paragraph {
-        font-size: 16px;
+        font-size: 20px;
     }
 }
 
@@ -168,39 +173,9 @@ body {
 }
 
 .interests-row {
-    height: 825px;
+    min-height: 825px;
     flex-direction: column;
     justify-content: center;
-}
-
-.project-row {
-    background-color: rgb(225, 225, 230);
-    border-bottom: 1px solid black;
-}
-
-.project-header {
-    padding-top: 55px;
-    font-size: 55px;
-    text-align: center;
-}
-
-.project-description {
-    font-size: 30px;
-    padding: 0px 50px 75px 50px;
-}
-
-.project-embedded-container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.project-embedded {
-    width: 90%;
-    height: 600px;
-    border-radius: 25px;
-    border: 1px solid black;
 }
 
 .interests-header {
@@ -218,10 +193,19 @@ body {
 .interests-card-row {
     flex: 3;
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding-bottom: 140px;
     padding-left: 100px;
     padding-right: 100px;
     gap: 20px;
+}
+
+@media (max-width: 840px) {
+    .interests-card-row {
+        flex-direction: column;
+        padding: 25px 0 25px 0;
+    }
 }
 
 .interests-card {
@@ -282,6 +266,36 @@ body {
     display: flex;
     align-items: center;
     overflow: auto;
+}
+
+.project-row {
+    background-color: rgb(225, 225, 230);
+    border-bottom: 1px solid black;
+}
+
+.project-header {
+    padding-top: 55px;
+    font-size: 55px;
+    text-align: center;
+}
+
+.project-description {
+    font-size: 30px;
+    padding: 0px 50px 75px 50px;
+}
+
+.project-embedded-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-embedded {
+    width: 90%;
+    height: 600px;
+    border-radius: 25px;
+    border: 1px solid black;
 }
 
 .interest-header {
